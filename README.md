@@ -1,2 +1,2 @@
 # RSA-Factoring-Challenge
-A simple trial to decrypt workings of RSA encryption
+A simple trial to decrypt workings of RSA encryption.
