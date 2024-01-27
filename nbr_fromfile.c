@@ -4,7 +4,7 @@
  * @param: this is the parameter to factorise
  * Return: NULL from my thinking
  */
-void factorise(long param)
+void factorise(int param)
 {
 	int i = 0, j = 0;
 	
