@@ -7,18 +7,24 @@
 void factorise(int param)
 {
 	int i = 0, j = 0;
-	
-	for (i = 0; i < param; i++)
+
+	if (param <= 1)
+		return;
+	while (param % 2 == 0)
 	{
-		for (j = 0; j < param; j++)
+		printf("%d=2*%d\n", param, param / 2);
+		num /= 2;
+	}
+	for (i = 3; i < sqrt(param); i+=2)
+	{
+		while (param % i == 0)
 		{
-			if (i * j == param)
-			{
-				printf("%d=%d*%d\n", param, j, i);
-				return;
-			}
+			printf("%d=%d*%d\n", param, i, param / i);
+			param /= i;
 		}
 	}
+	if (param > 2)
+		printf("%d=%d*%d\n", param, param, 1);
 }
 
 /**
