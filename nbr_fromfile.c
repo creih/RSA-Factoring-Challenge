@@ -13,9 +13,9 @@ void factorise(int param)
 	while (param % 2 == 0)
 	{
 		printf("%d=2*%d\n", param, param / 2);
-		num /= 2;
+		param /= 2;
 	}
-	for (i = 3; i < sqrt(param); i+=2)
+	for (i = 3; i * i <= param; i+=2)
 	{
 		while (param % i == 0)
 		{
