@@ -2,10 +2,8 @@
 #define FACTOR_H
 #include <stdio.h>
 #include <stdlib.h>
-void factorise(long param);
+void factorise(int param);
 int read_fromfile(const char *fil);
-
-
 
 
 #endif

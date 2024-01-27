@@ -6,7 +6,7 @@
  */
 void factorise(long param)
 {
-	long i = 0, j = 0;
+	int i = 0, j = 0;
 	
 	for (i = 0; i < param; i++)
 	{
@@ -14,7 +14,7 @@ void factorise(long param)
 		{
 			if (i * j == param)
 			{
-				printf("%ld=%ld*%ld\n", param, j, i);
+				printf("%d=%d*%d\n", param, j, i);
 				return;
 			}
 		}
@@ -28,7 +28,7 @@ void factorise(long param)
  */
 int read_fromfile(const char *fil)
 {
-	long umubare, inshuro = 0;
+	int umubare, inshuro = 0;
 	FILE *doc = fopen(fil, "r");
 
 	if (!doc)
@@ -36,7 +36,7 @@ int read_fromfile(const char *fil)
 		fprintf(stderr, "Error opening file: %s\n", fil);
 		return (-1);
 	}
-	while (fscanf(doc, "%ld", &umubare) == 1)
+	while (fscanf(doc, "%d", &umubare) == 1)
 	{
 		factorise(umubare);
 		inshuro += 1;
