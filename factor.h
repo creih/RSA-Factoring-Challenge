@@ -2,7 +2,7 @@
 #define FACTOR_H
 #include <stdio.h>
 #include <stdlib.h>
-void factorise(int param);
+void factorise(long param);
 int read_fromfile(const char *fil);
 
 
