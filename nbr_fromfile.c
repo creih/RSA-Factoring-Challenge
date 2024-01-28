@@ -24,7 +24,7 @@ void factorise(long param)
 		}
 	}
 	if (param > 2)
-		printf("%ld=%ld*%d\n", param, param, 1);
+		printf("%ld=%d*%ld\n", param, 1, param);
 }
 
 /**
