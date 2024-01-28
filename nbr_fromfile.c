@@ -24,7 +24,7 @@ void factorise(long param)
 		}
 	}
 	if (param > 2)
-		printf("%ld=%d*%ld\n", param, 1, param);
+		printf("%ld=%ld*%d\n", param, param, 1);
 }
 
 /**
@@ -52,12 +52,9 @@ int read_fromfile(const char *fil)
 	fclose(doc);
 	return (inshuro);
 }
-int main(int args, char **argv)
+void main(int args, char **argv)
 {
-	int nbr_nbrs = 0;
-	
 	if (args != 2)
-		return (-1);
-	nbr_nbrs = read_fromfile(argv[1]);
-	return (nbr_nbrs);
+		return;
+	read_fromfile(argv[1]);
 }
