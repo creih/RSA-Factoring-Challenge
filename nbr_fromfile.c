@@ -4,27 +4,27 @@
  * @param: this is the parameter to factorise
  * Return: NULL from my thinking
  */
-void factorise(int param)
+void factorise(long param)
 {
-	int i = 0, j = 0;
+	long i = 0, j = 0;
 
 	if (param <= 1)
 		return;
 	while (param % 2 == 0)
 	{
-		printf("%d=2*%d\n", param, param / 2);
+		printf("%ld=2*%ld\n", param, param / 2);
 		param /= 2;
 	}
 	for (i = 3; i * i <= param; i+=2)
 	{
 		while (param % i == 0)
 		{
-			printf("%d=%d*%d\n", param, i, param / i);
+			printf("%ld=%ld*%ld\n", param, i, param / i);
 			param /= i;
 		}
 	}
 	if (param > 2)
-		printf("%d=%d*%d\n", param, param, 1);
+		printf("%ld=%ld*%d\n", param, param, 1);
 }
 
 /**
@@ -34,7 +34,8 @@ void factorise(int param)
  */
 int read_fromfile(const char *fil)
 {
-	int umubare, inshuro = 0;
+	long umubare;
+	int inshuro = 0;
 	FILE *doc = fopen(fil, "r");
 
 	if (!doc)
@@ -42,7 +43,7 @@ int read_fromfile(const char *fil)
 		fprintf(stderr, "Error opening file: %s\n", fil);
 		return (-1);
 	}
-	while (fscanf(doc, "%d", &umubare) == 1)
+	while (fscanf(doc, "%ld", &umubare) == 1)
 	{
 		factorise(umubare);
 		inshuro += 1;

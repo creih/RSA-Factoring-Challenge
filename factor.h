@@ -4,7 +4,7 @@
 #include <stdlib.h>
 #include <math.h>
 
-void factorise(int param);
+void factorise(long param);
 int read_fromfile(const char *fil);
 
 #endif
